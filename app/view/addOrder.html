@@ -1,0 +1,26 @@
+<link href="fastDeliveryStyle.css"
+      rel="stylesheet" type="text/css">
+<div class="general">
+<h1 class="thetittle">{{tittle}}</h1>
+<form #myForm="ngForm" (ngSubmit)="addOrder(adress.value,restaurant.value,food.value)">
+	<p>
+		Adress:
+		<input type="text" #adress="ngForm" 
+			ngControl="adress" required minlength="5"/>
+	</p>
+	<p>
+		Restaurant:
+		<input type="text" #restaurant value={{nameRestaurant}}/>
+	</p>
+	<p>
+		Food:
+		<input type="text" #food="ngForm" 
+			ngControl="food" required minlength="5"/>
+	</p>
+	<input type="submit" value="Create Order" [disabled]="!myForm.form.valid" />
+	<input type="reset" value="Erase">
+</form>
+<br/>
+<br/>
+<img src="https://media.tenor.com/images/f9b27dd22b07b2fa850f0cebd54c73a2/tenor.gif">
+</div>

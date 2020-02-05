@@ -1,0 +1,20 @@
+<link href="fastDeliveryStyle.css"
+      rel="stylesheet" type="text/css">
+<div class="general">
+<h1 class="thetittle">{{tittle}}</h1>
+<ul *ngFor="#order of orders" style="margin-bottom: 20px;">
+		<li><a [routerLink] ="['AddOrderRestaurant',{restaurantSelect:order.restaurant}]">Restaurant: <strong>{{order.restaurant}}</strong></a></li>
+		<li>Food: <strong>{{order.food}}</strong></li>
+		<li>Address: <strong>{{order.address}}</strong></li>
+		<button style="font-size: 13px;
+		border:1px solid #ccc;
+		border-color:#000000;
+		border-radius: 4px;
+		box-shadow: 0px 0px 5px #ddd;
+		padding: 5px;
+		text-decoration: none;
+		color:white;
+		background: #F6372B;
+		cursor: pointer;" (click)="deleteOrder(order.address,order.restaurant,order.food)">Delete</button>
+</ul>
+</div>
