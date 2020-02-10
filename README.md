@@ -4,5 +4,9 @@ Pequeña aplicaciones web SPA (Single Page App) desarrollada para comprender los
 
 Abordar la creación de los componentes necesarios, uso de rutas y servicios, la creación y validación de formularios, entre otras cosas. Haciendo uso de TypeScript, HTML y CSS.
 
+```
 npm install
+```
+```
 npm start
+```
